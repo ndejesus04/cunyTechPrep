@@ -1,0 +1,19 @@
+@(genres: List[Genre])
+
+@main("Genres") {
+    <form action="@routes.Genres.create()" method="post">
+        <input type="text" name="name">
+        <button>Submit</button>
+    </form>
+
+    @if(genres.isEmpty()) {
+        <h2>No Tools available</h2>
+    } else {
+        <h2>Tool List</h2>
+        <ul>
+            @for(g <- genres) {
+                <li>@g.name</li>
+            }
+        </ul>
+    }
+}

@@ -1,0 +1,65 @@
+@(message: String)
+
+@main("Welcome to Play"){
+<body>
+<table style="width:100%; margin-left:105px">
+    <tr>
+        <td>
+            <h3> Login Form </h3>
+        </td>
+        <td>
+            <h3>Signup Form</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form action="@routes.Application.login()" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <br>
+
+                <button>Login</button>
+            </form>
+        </td>
+        <td>
+            <form action="@routes.Application.signup()" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username">
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <br>
+
+                <button>Sign Up</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<p />
+<p />
+<p />
+<p />
+
+<div style="background-color:#737373;">
+<table style="width:100%; margin-left:105px; font-size: 40px; font-weight: bold; text-color:#FFFFFF;">
+    <tr>
+        <td><a href = "/tools"> Tools</a></td>
+        <td><a href="/genres"> Genres</a></td>
+    </tr>
+
+
+</table>
+</div>
+
+
+
+
+</body>
+
+}
+

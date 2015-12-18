@@ -1,0 +1,20 @@
+body {
+
+    background-image: url("http://www.jaimetreadwell.com/tools-charcoal01.JPG");
+     background-repeat: no-repeat;
+     background-size: 1300px  1000px;
+    overflow-x: hidden;
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+h1,h2
+{
+    text-align:center;
+}
+
+h3
+{
+color: white;
+ font-size: 30px;
+}

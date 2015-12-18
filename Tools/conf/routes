@@ -1,0 +1,58 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /mainPage                   controllers.mainPage.index()
+GET     /signup                     controllers.Application.index()
+POST    /login                      controllers.Application.login()
+POST    /signup                     controllers.Application.signup()
+GET     /logout                     controllers.Application.logout()
+
+GET     /genres                     controllers.Genres.index()
+POST    /genres                     controllers.Genres.create()
+GET     /genres/:id                 controllers.Genres.show(id:Long)
+
+
+GET     /tools                     controllers.Tools.index()
+POST    /tools                     controllers.Tools.create()
+
+
+GET     /index.html          controllers.Assets.at(path= "/public", file = "index.html")
+GET     /public/stylesheets/agency.css  controllers.Assets.at(path= "/public/stylesheets", file = "agency.css")
+GET     /public/stylesheets/bootstrap.css  controllers.Assets.at(path= "/public/stylesheets", file = "bootstrap.css")
+GET     /public/stylesheets/bootstrap.min.css  controllers.Assets.at(path= "/public/stylesheets", file = "bootstrap.min.css")
+
+
+
+
+GET     /public/javascripts/agency.js  controllers.Assets.at(path= "/public/javascripts", file = "agency.js")
+GET     /public/javascripts/bootstrap.js  controllers.Assets.at(path= "/public/javascripts", file = "bootstrap.js")
+GET     /public/javascripts/bootstrap.min.js  controllers.Assets.at(path= "/public/javascripts", file = "bootstrap.min.js")
+GET     /public/javascripts/cbpAnimatedHeader.js  controllers.Assets.at(path= "/public/javascripts", file = "cbpAnimatedHeader.js")
+GET     /public/javascripts/cbpAnimatedHeader.min.js  controllers.Assets.at(path= "/public/javascripts", file = "cbpAnimatedHeader.min.js")
+GET     /public/javascripts/classie.js  controllers.Assets.at(path= "/public/javascripts", file = "classie.js")
+GET     /public/javascripts/contact_me.js  controllers.Assets.at(path= "/public/javascripts", file = "contact_me.js")
+GET     /public/javascripts/jqBootstrapValidation.js  controllers.Assets.at(path= "/public/javascripts", file = "jqBootstrapValidation.js")
+GET     /public/javascripts/jquery.js  controllers.Assets.at(path= "/public/javascripts", file = "jquery.js")
+
+
+
+GET     /images/        controllers.Assets.at(path="public/images", file="hompage.jpg")
+GET     /images         controllers.Assets.at(path="public/images", file="favicon.png")
+
+GET     /images/team    controllers.Assets.at(path="public/images", file="Nyvia.jpg.png")
+POST     /images/team    controllers.Assets.at(path="public/images", file="Nyvia.jpg.png")
+GET     /images/team    controllers.Assets.at(path="public/images", file="Shantoi.jpg.png")
+
+
+
+
+
+
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

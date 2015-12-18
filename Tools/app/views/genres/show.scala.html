@@ -1,0 +1,42 @@
+@(genre: Genre, tools: List[Tool]) (content: Html)
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>@genre</title>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+    <script src="@routes.Assets.versioned("javascripts/hello.js")" type="text/javascript"></script>
+    </head>
+    <body>
+
+
+@main("Genres") {
+
+        <h1>Genre: @genre.name</h1>
+
+        @if(tools.isEmpty()) {
+            <h2>Enter the type of tools you have...</h2>
+        }
+        else {
+            <div style="text-color:white;">
+            <h2>Tool List: @genre.name</h2>
+            <ul>
+                @for(t <- tools) {
+                    <li>@t.title</li>
+                }
+            </ul>
+
+            </div>
+        }
+}
+    </body>
+
+</html>
+
